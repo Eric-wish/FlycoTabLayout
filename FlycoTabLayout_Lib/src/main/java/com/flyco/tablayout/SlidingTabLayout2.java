@@ -278,7 +278,7 @@ public class SlidingTabLayout2 extends HorizontalScrollView {
     private CharSequence getPageTitle(int position) {
         RecyclerView.Adapter<?> adapter = mViewPager.getAdapter();
         if (adapter instanceof FragmentStateAdapter) {
-            ((FragmentStateAdapter) adapter).getItemTitle(position);
+            return ((FragmentStateAdapter) adapter).getItemTitle(position);
         }
         return "";
     }
